@@ -1,14 +1,18 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./.storybook/**/*.{js,ts,jsx,tsx}",  // Storybook에도 tailwind 적용하려면 추가
+    './app/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx}',
+    './stories/**/*.{ts,tsx}',
+    './.storybook/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {},
   },
+  darkMode: 'class', // class 기반 다크모드
   plugins: [],
-};
+}
+
+export default config
